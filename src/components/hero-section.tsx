@@ -147,15 +147,20 @@ export function HeroSection() {
             delay: 0.6,
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
-          className="flex justify-center mt-6 sm:mt-8 px-4"
+          className="flex justify-center mt-6 sm:mt-8 px-2 sm:px-4"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="w-full max-w-xs sm:max-w-none sm:w-auto"
           >
-            <CTAButton location="hero_primary" className="w-full sm:w-auto text-sm sm:text-base">
-              Take a FREE Growth Assessment
+            <CTAButton 
+              location="hero_primary" 
+              className="w-full sm:w-auto text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-3 sm:py-4 whitespace-nowrap overflow-hidden text-ellipsis"
+            >
+              <span className="block sm:hidden">Free Assessment</span>
+              <span className="hidden sm:block">Take a FREE Growth Assessment</span>
             </CTAButton>
           </motion.div>
         </motion.div>
