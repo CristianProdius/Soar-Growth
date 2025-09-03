@@ -1,21 +1,23 @@
 export const siteConfig = {
-  name: "AI Startup Landing Page",
-  description: "AI SaaS Landing Page. Built by MrInspection.",
-  creator: "MrInspection",
+  name: "SOARgrowth",
+  description: "Stop working harder. Start growing faster. Guaranteed growth for middle-market businesses using our proven SOAR methodology. Book your free consultation today.",
+  creator: "SOARgrowth",
+  tagline: "#1 Digital Platform for Middle-Market Businesses",
+  bookingUrl: "https://outlook.office.com/bookwithme/user/17505a49dd124eeeb13b8c8b62157c7d@prodiusenterprise.com/meetingtype/qN05IKdkd0OLr5vskOGcTg2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile",
   links: {
-    repositoryUrl: "https://github.com/MrInspection/ia-startup-landing-page",
-    creatorGithubUrl: "https://github.com/MrInspection/",
-    deploymentUrl: "https://splabs-ai-startup-lp.vercel.app/"
+    repositoryUrl: "https://github.com/soargrowth/landing-page",
+    creatorGithubUrl: "https://soargrowth.com/",
+    deploymentUrl: "https://soargrowth.com/"
   },
   openGraph: {
-    imageUrl: "https://splabs-ai-startup-lp.vercel.app/opengraph-image.png",
+    imageUrl: "https://soargrowth.com/opengraph-image.png", 
     imageWidth: 1200,
     imageHeight: 630,
   },
   twitter: {
-    creator: "@MrInspection",
+    creator: "@SOARgrowth",
     cardType: "summary_large_image",
-    imageUrl: "https://splabs-ai-startup-lp.vercel.app/opengraph-image.png"
+    imageUrl: "https://soargrowth.com/opengraph-image.png"
   },
 }
 

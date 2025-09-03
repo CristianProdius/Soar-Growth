@@ -43,37 +43,38 @@
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Light theme colors using the new blue palette */
+  --background: #F5FAFF; /* Lightest Blue background */
+  --foreground: #003687; /* Primary Blue for text */
+  --card: #FFFFFF; /* White cards */
+  --card-foreground: #003687; /* Primary Blue text on cards */
+  --popover: #FFFFFF; /* White popovers */
+  --popover-foreground: #003687; /* Primary Blue text on popovers */
+  --primary: #175CD3; /* Accent Blue for primary elements */
+  --primary-foreground: #FFFFFF; /* White text on primary elements */
+  --secondary: #BFD4F2; /* Light Blue for secondary elements */
+  --secondary-foreground: #003687; /* Primary Blue text on secondary */
+  --muted: #BFD4F2; /* Light Blue for muted elements */
+  --muted-foreground: #001A41; /* Dark Blue for muted text */
+  --accent: #175CD3; /* Accent Blue */
+  --accent-foreground: #FFFFFF; /* White text on accent */
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: rgba(0, 54, 135, 0.1); /* Primary Blue with opacity */
+  --input: rgba(0, 54, 135, 0.05); /* Very light Primary Blue */
+  --ring: #175CD3; /* Accent Blue for focus rings */
+  --chart-1: #175CD3; /* Accent Blue */
+  --chart-2: #003687; /* Primary Blue */
+  --chart-3: #BFD4F2; /* Light Blue */
+  --chart-4: #001A41; /* Dark Blue */
+  --chart-5: #F5FAFF; /* Lightest Blue */
+  --sidebar: #FFFFFF; /* White sidebar */
+  --sidebar-foreground: #003687; /* Primary Blue sidebar text */
+  --sidebar-primary: #175CD3; /* Accent Blue sidebar primary */
+  --sidebar-primary-foreground: #FFFFFF; /* White text on sidebar primary */
+  --sidebar-accent: #BFD4F2; /* Light Blue sidebar accent */
+  --sidebar-accent-foreground: #003687; /* Primary Blue text on sidebar accent */
+  --sidebar-border: rgba(0, 54, 135, 0.1); /* Primary Blue border with opacity */
+  --sidebar-ring: #175CD3; /* Accent Blue sidebar ring */
 }
 
 @layer base {
@@ -101,4 +102,59 @@
     background: var(--border);
     border-radius: 5px;
   }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Performance optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  content-visibility: auto;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.focus\:ring-2:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Premium shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
 }
